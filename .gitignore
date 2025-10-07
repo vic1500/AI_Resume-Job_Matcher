@@ -9,3 +9,7 @@ wheels/
 # Virtual environments
 .venv
 notebooks/Test.ipynb
+
+.python-version
+uv.lock
+pyproject.toml
