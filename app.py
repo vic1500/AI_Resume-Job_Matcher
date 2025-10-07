@@ -6,6 +6,8 @@ from src.skills.skills import CORE_SKILLS
 from src.utils.skill_matcher import compute_match_info
 from src.utils.extract_skills import extract_skills_from_text
 
+st.set_page_config(page_title="AI Resume-Job Matcher", page_icon="🤖", layout="centered")
+
 st.title("AI Resume-Job Matcher")
 st.header("Upload your resume and a job description to see how well they match.")
 
