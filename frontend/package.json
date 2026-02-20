@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "ROLLUP_SKIP_NATIVE_BUILD=true vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
