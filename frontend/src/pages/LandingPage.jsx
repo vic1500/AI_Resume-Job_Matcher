@@ -27,7 +27,7 @@ const Landing = () => {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             {/* Primary CTA: Get Started (Register) */}
             <Link
-              to="/register"
+              to="/signup"
               className="px-8 py-4 rounded-lg bg-green-600 hover:bg-green-500 text-white font-bold text-lg transition-all shadow-lg shadow-green-900/20 hover:shadow-green-900/40 transform hover:-translate-y-1"
             >
               Get Started
