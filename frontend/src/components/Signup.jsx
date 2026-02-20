@@ -21,7 +21,6 @@ export default function Signup() {
 
     try {
       await signup(formData.email, formData.password, formData.username);
-      // Optional: Auto-login here, or redirect to login page
       alert("Account created! Please log in.");
       navigate('/login');
     } catch (err) {

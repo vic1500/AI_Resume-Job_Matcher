@@ -7,10 +7,9 @@ export const ProtectedRoute = ({ children }) => {
   const { user, loading } = useAuth();
   const location = useLocation();
 
-  if (loading) return <div className="p-10 text-white">Loading...</div>; // Or a spinner
+  if (loading) return <div className="p-10 text-white">Loading...</div>;
 
   if (!user) {
-    // Redirect them to login, but remember where they were trying to go
     return <Navigate to="/login" state={{ from: location }} replace />;
   }
 

@@ -1,7 +1,6 @@
-// src/components/Navbar.jsx
 import { useState, useRef, useEffect } from "react";
 import { Link, NavLink } from "react-router";
-import { useAuth } from "../context/AuthContext"; // Import the hook
+import { useAuth } from "../context/AuthContext";
 
 const NAV_ITEMS = [
   { label: "Dashboard", path: "/" },
@@ -139,8 +138,16 @@ export default function Navbar() {
                    </div>
                    <span className="text-white font-medium">{user.username}</span>
                 </div>
-                <Link to="/change-password" onClick={() => setIsOpen(false)} className="block text-slate-400 py-2 hover:text-white">Change Password</Link>
-                <button onClick={logout} className="block text-red-400 py-2 hover:text-red-300 w-full text-left">Log Out</button>
+                <Link
+                    to="/change-password"
+                    onClick={() => setIsOpen(false)}
+                    className="block text-slate-400 py-2 hover:text-white">Change Password
+                </Link>
+                <button
+                    onClick={logout}
+                    className="block text-red-400 py-2 hover:text-red-300 w-full text-left">
+                  Log Out
+                </button>
              </div>
           ) : (
             <Link

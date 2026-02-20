@@ -20,13 +20,6 @@ def load_models():
 
 
     print("🔄 Loading embedding model...")
-    current_file_dir = Path(__file__).parent
-    model_path = current_file_dir.parent / "ml" / "all-MiniLM-L6-v2"
-    if not model_path.exists():
-        raise FileNotFoundError(f"❌ Could not find model directory at: {model_path.resolve()}")
-
-    print(f"📂 Loading from absolute path: {model_path.resolve()}")
-
-    models.embedding_model = SentenceTransformer(str(model_path))
+    models.embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
     print("✅ Embedding model loaded")
 

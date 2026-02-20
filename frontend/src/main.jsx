@@ -9,7 +9,7 @@ const root = document.getElementById("root");
 
 ReactDOM.createRoot(root).render(
   <BrowserRouter>
-    <AuthProvider> {/* Wrap everything inside Router and Provider */}
+    <AuthProvider>
       <App />
     </AuthProvider>
   </BrowserRouter>,

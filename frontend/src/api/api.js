@@ -1,5 +1,4 @@
-// src/api/api.js
-import api from './axios'; // Import the instance we configured
+import api from './axios';
 
 export async function uploadFiles(resumeFile, jobFile, resume_id = null) {
   try {
@@ -8,24 +7,19 @@ export async function uploadFiles(resumeFile, jobFile, resume_id = null) {
       formData.append("resume", resumeFile);
     }
 
-    // ✅ Only append if a file actually exists
     if (jobFile) {
       formData.append("job_description", jobFile);
     }
 
-    // ✅ Only append if we have an ID
     if (resume_id) {
       formData.append("resume_id", resume_id);
     }
 
-    // Axios automatically sets 'Content-Type: multipart/form-data' 
-    // and attaches the Authorization token if it exists.
     const response = await api.post("/match", formData);
 
     return response.data;
 
   } catch (err) {
-    // Axios wraps the backend response in err.response
     const errorMessage = err.response?.data?.detail || err.message || "Upload failed";
     throw new Error(errorMessage);
   }

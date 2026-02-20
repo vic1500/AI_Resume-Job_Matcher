@@ -22,7 +22,6 @@ const markdownOptions = {
 
 export default function AIInsights({ markdownContent }) {
   return (
-      // No 'prose' class needed here because you are styling manually
       <div className="text-gray-200">
           <Markdown options={markdownOptions}>
               {markdownContent}

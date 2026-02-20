@@ -33,7 +33,6 @@ const MatchDetails = () => {
         <span className="font-medium">Back to History</span>
       </button>
 
-      {/* --- The Title --- */}
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-100 mb-2">Match Details</h1>
         <p className="text-gray-400">
@@ -41,7 +40,6 @@ const MatchDetails = () => {
         </p>
       </div>
 
-      {/* --- Reuse your existing Match Result Component --- */}
       <MatchResult result={match} />
     </div>
   );

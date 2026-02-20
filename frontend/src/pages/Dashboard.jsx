@@ -124,9 +124,9 @@ export default function Dashboard() {
             <ResumeCard 
               key={resume.id} 
               resume={resume}
-              onQuickMatch={handleQuickMatch} // Your existing function
+              onQuickMatch={handleQuickMatch}
               onView={handleViewResume}  
-              onDelete={handleDelete}        // Your existing function
+              onDelete={handleDelete}
             />
           ))}
         </div>

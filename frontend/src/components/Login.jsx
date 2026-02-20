@@ -1,14 +1,13 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router';
-import { useAuth } from "../context/AuthContext"; // Import hook
-import { login as loginApi } from "../services/authService"; // Rename your service function
+import { useAuth } from "../context/AuthContext";
+import { login as loginApi } from "../services/authService";
 
 export default function Login() {
   const { login } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();

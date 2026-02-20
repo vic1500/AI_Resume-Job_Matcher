@@ -1,12 +1,10 @@
 import React from 'react';
 
-// Added 'onDelete' to props
 const ResumeCard = ({ resume, onQuickMatch, onView, onDelete }) => {
-  // Parse date safely
   const formattedDate = new Date(resume.created_at).toLocaleDateString();
   
   const file_type = resume.name.split('.').pop().toUpperCase()
-  let badge_color = "bg-red-500"; 
+  let badge_color;
 
     if (file_type === "PDF") {
         badge_color = "bg-red-500";

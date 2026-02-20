@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router"; // 👈 Import this
+import { useLocation } from "react-router";
 import MatchResult from "../components/MatchResult";
 import FileUploader from "../components/FileUploader.jsx";
-import { uploadFiles, fetchResumes } from "../api/api.js";
+import { uploadFiles } from "../api/api.js";
 import api from "../api/axios.js";
 
 function Match() {
@@ -25,8 +25,7 @@ function Match() {
         const res = await api.get("/resumes");
         const data = res.data
         setResumes(data);
-        console.log(data)
-        // Edge case: If no ID was passed, select the first one automatically?
+
         if (!selectedResumeId && data.length > 0) {
             setSelectedResumeId(data[0].id);
         }
@@ -50,9 +49,6 @@ function Match() {
 
     };
 
-
-    console.log(selectedResumeId)
-      console.log(selectedResumeId)
 
     loadResumes();
   }, []); // Run once on mount

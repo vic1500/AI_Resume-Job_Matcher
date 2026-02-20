@@ -11,7 +11,7 @@ function Insights() {
   useEffect(() => {
     const fetchHistory = async () => {
       try {
-        const res = await api.get("/match/history"); // Ensure this matches your backend route prefix
+        const res = await api.get("/match/history");
         setHistory(res.data);
       } catch (err) {
         console.error(err);
@@ -31,7 +31,6 @@ function Insights() {
 
     try {
         await api.delete(`/match/history/${matchId}`);
-        // Remove from UI immediately without refetching
         setHistory(prev => prev.filter(item => item.id !== matchId));
     } catch (err) {
         console.error("Failed to delete:", err);
