@@ -11,17 +11,21 @@ RUN pip install --no-cache-dir -r requirements.txt
 # 4. Copy the rest of your application code
 COPY . .
 
-# 5. --- THE SECURITY FIX ---
-# Create a standard user (ID 10014) with a home directory.
-# Then, give this new user ownership of the /app folder so it can read/write files.
-RUN useradd -u 10014 -m appuser && chown -R appuser /app
+# 5. --- THE CACHE FIX ---
+# Tell all Machine Learning libraries to use the writable /tmp folder
+ENV HF_HOME=/tmp/huggingface
+ENV TRANSFORMERS_CACHE=/tmp/huggingface
+ENV SENTENCE_TRANSFORMERS_HOME=/tmp/sentence_transformers
+ENV MPLCONFIGDIR=/tmp/matplotlib
 
+# 6. --- THE SECURITY FIX ---
+RUN useradd -u 10014 -m appuser && chown -R appuser /app
 # Switch to the new, secure user
 USER 10014
 # ---------------------------
 
-# 6. Expose the port your app uses
+# 7. Expose the port your app uses
 EXPOSE 8000
 
-# 7. Start the live server
+# 8. Start the live server
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
