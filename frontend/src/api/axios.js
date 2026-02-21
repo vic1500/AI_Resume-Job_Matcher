@@ -3,7 +3,7 @@ import axios from 'axios';
 
 
 const api = axios.create({
-  baseURL: '/choreo-apis/ai-resume-job-matcher/backend/v1/api/v1',
+  baseURL: import.meta.env.VITE_API_URL || '/choreo-apis/ai-resume-job-matcher/backend/v1/api/v1',
 });
 
 // 2. Add an "Interceptor" to automatically add the Token

@@ -18,6 +18,7 @@ export default function Login() {
 
     } catch (err) {
       setError("Login failed");
+      console.error(err)
     }
   };
 
