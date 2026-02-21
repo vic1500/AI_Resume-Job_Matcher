@@ -35,7 +35,7 @@ const Landing = () => {
 
             {/* Secondary CTA: Test Match (No Login) */}
             <Link
-              to="/match"
+              to="/guest_match"
               className="px-8 py-4 rounded-lg bg-gray-800 hover:bg-gray-700 text-gray-200 font-medium text-lg border border-gray-700 transition-all hover:border-gray-500"
             >
               Try a Test Match
