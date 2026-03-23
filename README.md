@@ -1,4 +1,4 @@
-# 🧠 AI Resume & Job Description Matcher (Full-Stack)
+# 🧠 AI Resume & Job Matcher
 
 This is a powerful **full-stack application** designed to bridge the gap between candidates and job requirements. Unlike simple keyword counters, this tool utilizes **Natural Language Processing (NLP)** to parse resumes (PDF/DOCX), extract key entities, and calculate a **semantic compatibility score** using TF-IDF and Cosine Similarity.
 
