@@ -1,6 +1,6 @@
 # 🧠 AI Resume & Job Matcher
 
-This is a powerful **full-stack application** designed to bridge the gap between candidates and job requirements. Unlike simple keyword counters, this tool utilizes **Natural Language Processing (NLP)** to parse resumes (PDF/DOCX), extract key entities, and calculate a **semantic compatibility score** using TF-IDF and Cosine Similarity.
+This is a powerful **full-stack application** designed to bridge the gap between candidates and job requirements. Unlike simple keyword counters, this tool utilizes **Natural Language Processing (NLP)** to parse resumes (PDF/DOCX), extract key entities, and calculate a **semantic compatibility score** using embeddings and Cosine Similarity.
 
 It features a modern **React** frontend for a seamless user experience and a robust **FastAPI** backend for high-performance processing.
 
@@ -9,7 +9,7 @@ It features a modern **React** frontend for a seamless user experience and a rob
 ## ✨ Features
 
 - 📄 **Smart Parsing:** Automatically extracts text and metadata from PDF and DOCX resumes using `pdfplumber` and `python-docx`.
-- 🧠 **NLP-Powered Matching:** Uses `spaCy` and `scikit-learn` to understand context, not just exact keyword matches.
+- 🧠 **NLP-Powered Matching:** Uses `spaCy` and `sentence-transformer` to understand context, not just exact keyword matches.
 - 📊 **Similarity Scoring:** Calculates a precise percentage score representing how well a resume fits a specific job description.
 - ⚡ **FastAPI Backend:** A high-speed, asynchronous REST API handling uploads, processing, and database interactions.
 - 🎨 **Modern Frontend:** A responsive dashboard built with **React (Vite)**, **TypeScript**, and **Tailwind CSS**.
@@ -22,7 +22,7 @@ It features a modern **React** frontend for a seamless user experience and a rob
 ### **Backend (Python)**
 - **Framework:** FastAPI
 - **Package Manager:** uv ⚡
-- **AI/ML:** spaCy, scikit-learn, numpy
+- **AI/ML:** spaCy, scikit-learn, numpy, sentence-transformer
 - **Database:** PostgreSQL (Neon), SQLModel (SQLAlchemy)
 - **Parsing:** pdfplumber, python-docx
 
