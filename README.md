@@ -42,7 +42,7 @@ It features a modern **React** frontend for a seamless user experience and a rob
 
 ### 1. Clone the Repository
 ```bash
-git clone [https://github.com/vic1500/AI_Resume-Job_Matcher.git](https://github.com/vic1500/AI_Resume-Job_Matcher.git)
+git clone https://github.com/vic1500/AI_Resume-Job_Matcher.git
 cd AI_Resume-Job_Matcher
 ```
 
@@ -53,6 +53,9 @@ cd backend
 
 # Create virtual environment & install dependencies
 uv sync
+
+# Or install with pip
+pip install -r requirements.txt
 
 # Create a .env file (see .env.example) and add your Database URL
 # echo "DATABASE_URL=postgresql://user:pass@host/db" > .env
