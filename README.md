@@ -9,7 +9,7 @@ It features a modern **React** frontend for a seamless user experience and a rob
 ## ✨ Features
 
 - 📄 **Smart Parsing:** Automatically extracts text and metadata from PDF and DOCX resumes using `pdfplumber` and `python-docx`.
-- 🧠 **NLP-Powered Matching:** Uses `spaCy` and `scikit-learn` (TF-IDF) to understand context, not just exact keyword matches.
+- 🧠 **NLP-Powered Matching:** Uses `spaCy` and `scikit-learn` to understand context, not just exact keyword matches.
 - 📊 **Similarity Scoring:** Calculates a precise percentage score representing how well a resume fits a specific job description.
 - ⚡ **FastAPI Backend:** A high-speed, asynchronous REST API handling uploads, processing, and database interactions.
 - 🎨 **Modern Frontend:** A responsive dashboard built with **React (Vite)**, **TypeScript**, and **Tailwind CSS**.
